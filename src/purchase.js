@@ -3,6 +3,8 @@ import './App.css';
 import { Button, Space, Input, Form, Select } from "antd";
 import { useNavigate } from 'react-router-dom';
 import logo from './logo/logo.png';
+import { database } from "./firebase";
+import { push, ref } from "firebase/database";
 
 const { Option } = Select;
 
@@ -57,6 +59,8 @@ export default function Purchase() {
   const navigate = useNavigate();
   const [price, setPrice] = useState(0);
   const [total, setTotal] = useState(0);
+  const [form] = Form.useForm();
+
 
   const handleDrinkChange = (value) => {    // 設置訂購表單
     const selectedDrink = drinks.find(drink => drink.name === value);
@@ -85,15 +89,33 @@ export default function Purchase() {
   };
 
   const onFinish = (values) => {
-    console.log('Success:', values);
-    alert(`訂購成功！總金額：${total} 元`);
+    const orderData = {
+      ...values,
+      total,
+      timestamp: new Date().toISOString()
+    }
+    console.log('Order Data:', orderData);
+
+    push(ref(database, 'orders'), orderData)
+      .then(() => {
+        console.log('Success:', values);
+        alert(`訂購成功！總金額：${total} 元`);
+        form.resetFields();  // 重置表單
+        setTotal(0);  // 重置總金額
+        
+      })
+      .catch((error) =>
+      {
+        onFinishFailed(error);
+      })
+
   };
 
   const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
+    alert(`訂購失敗，請稍後再試!，錯誤原因: ${errorInfo.message}`);
   };
 
-  const [form] = Form.useForm();
 
   return (
     <>
