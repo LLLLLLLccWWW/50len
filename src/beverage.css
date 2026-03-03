@@ -25,4 +25,25 @@
     margin-top: 10px;
     text-align: center;
   }
+
+/* responsive */
+@media (max-width: 768px) {
+  .drink-item {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .drink-item {
+    width: 100%;
+  }
+  .drink-image {
+    width: 100%;
+    height: auto;
+  }
+  .menu-container {
+    font-size: 24px;
+    padding: 10px;
+  }
+}
   

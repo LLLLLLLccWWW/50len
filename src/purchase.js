@@ -122,7 +122,7 @@ export default function Purchase() {
       <div className="App-logo content">
         <img src={logo} width={250} alt="Logo" />
         <Space size={50} className="App-list">
-          <Button type="link"
+          <Button type="link" className="nav-btn"
             style={{
               color: 'white',
               fontSize: 30,
@@ -132,7 +132,7 @@ export default function Purchase() {
           >
             找好茶
           </Button>
-          <Button type="link"
+          <Button type="link" className="nav-btn"
             style={{
               color: 'white',
               fontSize: 30,
@@ -142,7 +142,7 @@ export default function Purchase() {
           >
             找拿鐵(鮮奶)
           </Button>
-          <Button type="link"
+          <Button type="link" className="nav-btn"
             style={{
               color: 'white',
               fontSize: 30,
@@ -152,7 +152,7 @@ export default function Purchase() {
           >
             找奶茶(奶精)
           </Button>
-          <Button type="link"
+          <Button type="link" className="nav-btn"
             style={{
               color: 'white',
               fontSize: 30,
@@ -162,7 +162,7 @@ export default function Purchase() {
           >
             找新鮮(無咖啡因)
           </Button>
-          <Button type="link"
+          <Button type="link" className="nav-btn"
             style={{
               color: 'white',
               fontSize: 30,

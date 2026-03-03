@@ -18,7 +18,7 @@ export default function Homepages() {
           alt="Logo"
         />
         <Space size={50} className="App-list">
-          <Button type="link"
+          <Button type="link" className="nav-btn"
             style={{
               color: 'white',
               fontSize: 30,
@@ -28,7 +28,7 @@ export default function Homepages() {
           >
             找好茶
           </Button>
-          <Button type="link"
+          <Button type="link" className="nav-btn"
             style={{
               color: 'white',
               fontSize: 30,
@@ -38,7 +38,7 @@ export default function Homepages() {
           >
             找拿鐵(鮮奶)
           </Button>
-          <Button type="link"
+          <Button type="link" className="nav-btn"
             style={{
               color: 'white',
               fontSize: 30,
@@ -48,7 +48,7 @@ export default function Homepages() {
           >
             找奶茶(奶精)
           </Button>
-          <Button type="link"
+          <Button type="link" className="nav-btn"
             style={{
               color: 'white',
               fontSize: 30,

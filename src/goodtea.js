@@ -60,22 +60,22 @@ export default function Goodtea() {
       <div className="App-logo content">
         <img src={logo} width={250} alt="Logo" />
         <Space size={50} className="App-list">
-          <Button type="link" style={{ color: 'white', fontSize: 25, fontWeight: 'bold' }} onClick={() => navigate('/goodtea')}>
+          <Button type="link" className="nav-btn" style={{ color: 'white', fontSize: 25, fontWeight: 'bold' }} onClick={() => navigate('/goodtea')}>
             找好茶
           </Button>
-          <Button type="link" style={{ color: 'white', fontSize: 25, fontWeight: 'bold' }} onClick={() => navigate('/milk')}>
+          <Button type="link" className="nav-btn" style={{ color: 'white', fontSize: 25, fontWeight: 'bold' }} onClick={() => navigate('/milk')}>
             找拿鐵(鮮奶)
           </Button>
-          <Button type="link" style={{ color: 'white', fontSize: 25, fontWeight: 'bold' }} onClick={() => navigate('/milktea')}>
+          <Button type="link" className="nav-btn" style={{ color: 'white', fontSize: 25, fontWeight: 'bold' }} onClick={() => navigate('/milktea')}>
             找奶茶(奶精)
           </Button>
-          <Button type="link" style={{ color: 'white', fontSize: 25, fontWeight: 'bold' }} onClick={() => navigate('/fresh')}>
+          <Button type="link" className="nav-btn" style={{ color: 'white', fontSize: 25, fontWeight: 'bold' }} onClick={() => navigate('/fresh')}>
             找新鮮(無咖啡因)
           </Button>
-          <Button type="link" style={{ color: 'white', fontSize: 25, fontWeight: 'bold' }} onClick={() => navigate('/purchase')}>
+          <Button type="link" className="nav-btn" style={{ color: 'white', fontSize: 25, fontWeight: 'bold' }} onClick={() => navigate('/purchase')}>
             我要訂購
           </Button>
-          <Button type="link" style={{ color: 'white', fontSize: 25, fontWeight: 'bold' }} onClick={() => navigate('/')}>
+          <Button type="link" className="nav-btn" style={{ color: 'white', fontSize: 25, fontWeight: 'bold' }} onClick={() => navigate('/') }>
             回首頁
           </Button>
         </Space>

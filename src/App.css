@@ -38,6 +38,25 @@
   z-index: 1; /* 確保 logo 在背景圖之上 */
 }
 
+/* make logo responsive */
+.App-logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* navigation link buttons */
+.nav-btn {
+  color: white !important;
+  font-weight: bold !important;
+  /* base font size will be overridden by inline style if provided */
+}
+
+@media (max-width: 768px) {
+  .nav-btn {
+    font-size: 1.4rem !important;
+  }
+}
+
 .App-list {
   display: flex;
   justify-content: center;
@@ -112,4 +131,65 @@
   padding: 50px;
   background-color: white;
   margin: 20px;
+}
+
+.purchase-content form {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+  .purchase-content {
+    padding: 20px;
+    margin: 10px;
+  }
+}
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .App-logo {
+    flex-direction: column;
+    align-items: center;
+  }
+  .App-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .App-list > button {
+    margin: 5px 0;
+    font-size: 1.8rem;
+  }
+  .intro-text,
+  .intro-image {
+    width: 100%;
+    text-align: center;
+  }
+  .intro-image img {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .welcome-text {
+    font-size: 32px;
+  }
+  .drink-item {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .App-list > button {
+    font-size: 1.4rem;
+  }
+  .drink-item {
+    width: 100%;
+  }
+  .drink-image {
+    width: 100%;
+    height: auto;
+  }
+  .menu-container {
+    font-size: 24px;
+    padding: 10px;
+  }
 }
